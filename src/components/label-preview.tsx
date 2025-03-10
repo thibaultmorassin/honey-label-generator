@@ -13,34 +13,38 @@ export function LabelPreview({
   size,
 }: LabelPreviewProps) {
   return (
-    <div className="w-full max-w-[10cm] h-auto aspect-[10/7] border border-gray-300 relative overflow-hidden">
-      <Image
-        src="/placeholder.svg?height=280&width=400"
-        alt="Background"
-        layout="fill"
-        objectFit="cover"
-      />
-      <div className="absolute inset-0 flex p-2">
+    <div className="w-full max-w-[10cm] h-auto aspect-[10/7] border border-gray-300 relative overflow-hidden bg-white rounded-xl">
+      <div className="absolute inset-0 flex p-4">
         <div className="w-1/2 flex flex-col items-center justify-between">
           <Image
-            src="/placeholder.svg"
+            src="/ruche.jpeg"
             alt="Logo"
             width={100}
             height={100}
-            className="w-full max-w-[100px] h-auto"
+            className="w-full max-w-[140px] h-[140px] mt-4"
           />
+          <p>LES RUCHERS DE PAPOU</p>
         </div>
-        <div className="w-1/2 flex flex-col justify-between">
+        <div className="w-1/2 flex flex-col justify-between text-center">
           <div>
-            <h2 className="text-sm sm:text-lg font-bold">{productName}</h2>
+            <h2 className="text-sm sm:text-lg font-bold underline">{productName}</h2>
+            <p className="text-xs xs:text-xs">{"Récolté en Charente-Maritime"}</p>
+          </div>
+          <div>
+            <p className="text-xs sm:text-sm">{"Patrick Dayet"}</p>
+            <p className="text-xs sm:text-sm">{"17190 Saint Georges"}</p>
             <p className="text-xs sm:text-sm">{PHONE_NUMBER}</p>
           </div>
           <div className="self-end">
+            <p className="text-xs xs:text-xs">
+              {"A consommer de préférence avant le :"}
+            </p>
             <p className="text-xs sm:text-sm">
-              {"Date d'expiration:"}{" "}
               {expirationDate?.toLocaleDateString("fr-FR")}
             </p>
+            <p className="text-xs xs:text-xs"> Mis en pot par l'apiculteur</p>
             <p className="text-xs sm:text-sm font-bold">{size}</p>
+            
           </div>
         </div>
       </div>

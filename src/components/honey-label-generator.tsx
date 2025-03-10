@@ -64,9 +64,9 @@ export default function Home() {
   };
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="container mx-auto px-4 py-16">
       <h1 className="text-2xl font-bold mb-4">
-        {"Générateur d'étiquettes pour pots de miel"}
+        {"Paramètres de l'étiquette"}
       </h1>
       <div className="flex flex-col md:flex-row gap-4">
         <div className="w-full md:w-1/2">
@@ -79,7 +79,7 @@ export default function Home() {
           />
         </div>
         <div className="w-full md:w-1/2">
-          <h2 className="text-xl font-bold mb-2">{"Aperçu de l'étiquette"}</h2>
+          <h2 className="text-xl font-bold mb-2">{"Aperçu"}</h2>
           <div className="flex justify-center">
             <LabelPreview {...watchedFields} />
           </div>
